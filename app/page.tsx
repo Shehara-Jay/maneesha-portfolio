@@ -2,68 +2,97 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero Section */}
-      <section className="bg-slate-950 text-white">
-        <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-20 lg:px-8">
-          <div className="max-w-4xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-              Full-Stack Web Developer & Product Builder
-            </p>
+{/* Hero Section */}
+      <section className="relative overflow-hidden bg-slate-950 text-white">
+        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-cyan-500/10 blur-3xl" />
 
-            <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              Building modern websites, web apps and digital products.
-            </h1>
+        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-20 lg:px-8">
+          <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+                Full-Stack Web Developer & Product Builder
+              </p>
 
-            <p className="mb-8 max-w-2xl text-lg leading-8 text-slate-300">
-              I’m Maneesha, a full-stack web developer with a strong frontend
-              and UI/UX focus. I help startups, small businesses and agencies
-              build clean, responsive websites, landing pages, dashboards and
-              web applications using React, Next.js, Node.js and Figma.
-            </p>
+              <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+                Hi, I&apos;m Maneesha. I build modern websites, web apps and digital products.
+              </h1>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#projects"
-                className="rounded-full bg-blue-500 px-7 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-400"
-              >
-                View Projects
-              </a>
+              <p className="mb-8 max-w-2xl text-lg leading-8 text-slate-300">
+                I help startups, small businesses and agencies turn ideas into clean,
+                responsive and user-friendly digital experiences using React, Next.js,
+                Node.js, Tailwind CSS and Figma.
+              </p>
 
-              <a
-                href="#contact"
-                className="rounded-full border border-slate-500 px-7 py-3 text-center text-sm font-semibold text-white transition hover:border-blue-400 hover:text-blue-300"
-              >
-                Contact Me
-              </a>
-            </div>
-          </div>
+              <div className="mb-8 flex flex-wrap gap-3">
+                {["React", "Next.js", "Node.js", "Tailwind CSS", "Figma"].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm text-slate-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
 
-          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h3 className="font-semibold text-white">Websites</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                Clean, responsive business websites.
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="#projects"
+                  className="rounded-full bg-blue-500 px-7 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-400"
+                >
+                  View Projects
+                </a>
+
+                <a
+                  href="#contact"
+                  className="rounded-full border border-slate-500 px-7 py-3 text-center text-sm font-semibold text-white transition hover:border-blue-400 hover:text-blue-300"
+                >
+                  Contact Me
+                </a>
+              </div>
+
+              <p className="mt-6 text-sm text-slate-400">
+                Available for remote freelance, contract and collaboration opportunities.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h3 className="font-semibold text-white">Landing Pages</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                High-converting pages for products and services.
-              </p>
-            </div>
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-blue-950/40">
+              <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+                <p className="mb-4 text-sm font-medium text-blue-400">
+                  What I build
+                </p>
 
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h3 className="font-semibold text-white">Web Apps</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                Functional web applications and dashboards.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h3 className="font-semibold text-white">UI/UX Design</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                User-focused interfaces with modern design.
-              </p>
+                <div className="space-y-4">
+                  {[
+                    {
+                      title: "Websites",
+                      description: "Modern, responsive websites for businesses and personal brands.",
+                    },
+                    {
+                      title: "Landing Pages",
+                      description: "Clear, conversion-focused pages for products and services.",
+                    },
+                    {
+                      title: "Web Apps",
+                      description: "Dashboards, forms, interfaces and full-stack features.",
+                    },
+                    {
+                      title: "Digital Products",
+                      description: "Product ideas turned into useful, user-friendly experiences.",
+                    },
+                  ].map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-2xl border border-slate-800 bg-slate-900 p-5"
+                    >
+                      <h3 className="font-semibold text-white">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
