@@ -353,35 +353,50 @@ export default function Home() {
               Skills
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Technologies I work with
+              Technologies and tools I use
             </h2>
+            <p className="mt-5 leading-8 text-slate-300">
+              I work across frontend, backend, mobile and product design to build
+              clean and practical digital experiences.
+            </p>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              "React",
-              "Next.js",
-              "JavaScript",
-              "Node.js",
-              "Tailwind CSS",
-              "Figma",
-              "Flutter",
-              "Kotlin",
-              "Python",
-              "PHP",
-              "REST APIs",
-              "MySQL",
-              "Git",
-              "GitHub",
-              "Responsive Design",
-              "UI/UX Design",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-slate-700 bg-slate-900 px-5 py-2 text-sm text-slate-200"
+              {
+                title: "Frontend",
+                skills: ["React", "Next.js", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
+              },
+              {
+                title: "Backend",
+                skills: ["Node.js", "REST APIs", "PHP", "Python", "MySQL", "API Integration"],
+              },
+              {
+                title: "Mobile",
+                skills: ["Flutter", "Kotlin", "Android Development", "Firebase"],
+              },
+              {
+                title: "Design & Tools",
+                skills: ["Figma", "UI/UX Design", "Git", "GitHub", "VS Code", "Linux"],
+              },
+            ].map((category) => (
+              <div
+                key={category.title}
+                className="rounded-3xl border border-slate-800 bg-slate-900/70 p-7"
               >
-                {skill}
-              </span>
+                <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-slate-700 bg-slate-950 px-3 py-1.5 text-xs font-medium text-slate-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
