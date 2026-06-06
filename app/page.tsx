@@ -404,33 +404,83 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="px-6 py-24 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
-            Contact
-          </p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Let’s build something professional together.
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            I’m open to remote freelance, contract and collaboration
-            opportunities with startups, small businesses and digital agencies.
-          </p>
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-3xl bg-slate-950 px-6 py-16 text-white shadow-2xl shadow-slate-200 sm:px-10 lg:px-16">
+            <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
+                  Contact
+                </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="mailto:maneeshashehara5@gmail.com"
-              className="rounded-full bg-slate-950 px-7 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-            >
-              Email Me
-            </a>
-            <a
-              href="https://www.linkedin.com/in/maneesha-shehara-463a9b222/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-300 px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-blue-500 hover:text-blue-600"
-            >
-              LinkedIn
-            </a>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  Have a website, web app or product idea to build?
+                </h2>
+
+                <p className="mt-5 max-w-2xl leading-8 text-slate-300">
+                  I’m open to remote freelance, contract and collaboration
+                  opportunities with startups, small businesses, founders and digital
+                  agencies. Let’s discuss how I can help turn your idea into a clean,
+                  responsive and practical digital experience.
+                </p>
+
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <a
+                    href="mailto:maneeshashehara5@gmail.com"
+                    className="rounded-full bg-blue-500 px-7 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-400"
+                  >
+                    Send Email
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/maneesha-shehara-463a9b222/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-slate-500 px-7 py-3 text-center text-sm font-semibold text-white transition hover:border-blue-400 hover:text-blue-300"
+                  >
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-7">
+                <h3 className="text-xl font-semibold">Open to</h3>
+
+                <div className="mt-6 space-y-4">
+                  {[
+                    "Remote freelance projects",
+                    "Startup MVP development",
+                    "Website and landing page projects",
+                    "Agency collaboration and overflow work",
+                    "Frontend, full-stack and UI-focused roles",
+                  ].map((item) => (
+                    <div key={item} className="flex gap-3">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-blue-400" />
+                      <p className="text-sm leading-6 text-slate-300">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 border-t border-slate-800 pt-6">
+                  <p className="text-sm text-slate-400">Email</p>
+                  <a
+                    href="mailto:maneeshashehara5@gmail.com"
+                    className="mt-1 block text-sm font-semibold text-white hover:text-blue-300"
+                  >
+                    maneeshashehara5@gmail.com
+                  </a>
+
+                  <p className="mt-5 text-sm text-slate-400">GitHub</p>
+                  <a
+                    href="https://github.com/Shehara-Jay"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 block text-sm font-semibold text-white hover:text-blue-300"
+                  >
+                    github.com/Shehara-Jay
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
