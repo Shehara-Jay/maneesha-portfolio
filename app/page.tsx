@@ -101,35 +101,81 @@ export default function Home() {
       {/* About Section */}
       <section className="px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
                 About Me
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                A developer who thinks beyond code.
+
+              <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+                I build practical digital products with clean design and reliable code.
               </h2>
+
+              <p className="mt-5 text-base leading-8 text-slate-600">
+                I’m a full-stack web developer and product builder from Sri Lanka,
+                focused on helping startups, small businesses and agencies create
+                modern websites, web apps and digital experiences.
+              </p>
             </div>
 
-            <div className="space-y-5 text-base leading-8 text-slate-600">
-              <p>
-                I have experience in web development, mobile application
-                development and software engineering projects. My background
-                includes React, JavaScript, Node.js, Flutter, Kotlin, Python,
-                PHP, REST APIs and responsive user interfaces.
-              </p>
+            <div className="space-y-6">
+              <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-xl font-semibold text-slate-950">
+                  My development background
+                </h3>
 
-              <p>
-                I’m also building TravelBozz, a tour guide planning product
-                designed to help users plan travel experiences more easily.
-                This product experience helps me understand design, development,
-                user experience and real product thinking.
-              </p>
+                <p className="mt-4 leading-8 text-slate-600">
+                  I have hands-on experience in web development, mobile application
+                  development and software engineering projects. My technical
+                  background includes React, Next.js, JavaScript, Node.js, Flutter,
+                  Kotlin, Python, PHP, REST API integration, MySQL, Git and responsive
+                  UI development.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-xl font-semibold text-slate-950">
+                  Product builder mindset
+                </h3>
+
+                <p className="mt-4 leading-8 text-slate-600">
+                  I’m also building TravelBozz, a tour guide planning tool designed to
+                  help users plan travel experiences more easily. Working on my own
+                  product has helped me think beyond code and focus on user needs,
+                  product structure, usability and practical business value.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                {[
+                  {
+                    value: "2+",
+                    label: "Years of software development experience",
+                  },
+                  {
+                    value: "4+",
+                    label: "Web, mobile and product projects",
+                  },
+                  {
+                    value: "Remote",
+                    label: "Open to international opportunities",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-5"
+                  >
+                    <p className="text-2xl font-bold text-slate-950">{item.value}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="bg-slate-50 px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
