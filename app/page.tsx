@@ -183,114 +183,61 @@ export default function Home() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
               Services
             </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              What I can help you build
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              Web solutions for startups, businesses and agencies
             </h2>
+            <p className="mt-5 leading-8 text-slate-600">
+              I help turn ideas, designs and business needs into clean, responsive
+              and practical digital experiences.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Website Development",
+                title: "Business Websites",
                 description:
-                  "Modern, responsive websites for startups, small businesses, consultants and personal brands.",
+                  "Professional websites for small businesses, consultants and personal brands that need a trustworthy online presence.",
               },
               {
                 title: "Landing Pages",
                 description:
-                  "Clean landing pages designed to explain your offer clearly and turn visitors into leads.",
+                  "Focused pages for products, services and campaigns with clear messaging, strong layout and conversion-focused sections.",
               },
               {
                 title: "Web Applications",
                 description:
-                  "Functional web apps, dashboards, forms and simple full-stack features.",
+                  "Practical web apps, dashboards, forms and user interfaces with frontend and backend integration.",
               },
               {
                 title: "Figma to React / Next.js",
                 description:
-                  "Converting UI designs into clean, responsive and reusable frontend code.",
+                  "Turning Figma designs into responsive, clean and reusable frontend code using React, Next.js and Tailwind CSS.",
               },
               {
-                title: "UI/UX Design",
+                title: "MVP Development",
                 description:
-                  "User-friendly interfaces with clear structure, good spacing and modern visual design.",
+                  "Helping founders and product teams build early versions of digital products with clear structure and usable features.",
               },
               {
                 title: "Website Improvements",
                 description:
-                  "Redesign, maintenance, bug fixes, performance improvements and content updates.",
+                  "Improving existing websites through redesign, bug fixes, mobile responsiveness, performance and content updates.",
               },
             ].map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
               >
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-lg font-bold text-blue-600 group-hover:bg-blue-600 group-hover:text-white">
+                  {service.title.charAt(0)}
+                </div>
+
+                <h3 className="text-xl font-semibold text-slate-950">
+                  {service.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
                   {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="px-6 py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
-              Projects
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Selected work and product experience
-            </h2>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-2">
-            {[
-              {
-                title: "TravelBozz",
-                type: "Product / Travel Planning Tool",
-                description:
-                  "A tour guide planning product designed to help users plan travel experiences more easily.",
-                tech: "React, Product Planning, UI/UX",
-              },
-              {
-                title: "Serendib Yathra",
-                type: "Final Year Project / ML Travel Planner",
-                description:
-                  "An intelligent tour guide planner for personalized travel experiences in Sri Lanka using machine learning and route optimization.",
-                tech: "React, Python, Flask, Machine Learning",
-              },
-              {
-                title: "SpeakLing",
-                type: "Research Project / AI Voice Assistant",
-                description:
-                  "An AI-based voice assistant system designed to support autistic children through interactive communication.",
-                tech: "Flutter, Java, Python, Firebase",
-              },
-              {
-                title: "Modern SaaS Landing Page",
-                type: "Portfolio Sample",
-                description:
-                  "A clean landing page concept for a startup product, focused on clear messaging, responsive layout and strong call-to-action flow.",
-                tech: "Next.js, React, Tailwind CSS, Figma",
-              },
-            ].map((project) => (
-              <div
-                key={project.title}
-                className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
-              >
-                <p className="mb-3 text-sm font-medium text-blue-600">
-                  {project.type}
-                </p>
-                <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="mt-4 leading-7 text-slate-600">
-                  {project.description}
-                </p>
-                <p className="mt-5 text-sm font-semibold text-slate-800">
-                  Tech: {project.tech}
                 </p>
               </div>
             ))}
