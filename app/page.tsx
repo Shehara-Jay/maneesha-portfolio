@@ -245,6 +245,106 @@ export default function Home() {
         </div>
       </section>
 
+            {/* Projects Section */}
+      <section id="projects" className="px-6 py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 max-w-2xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
+              Projects
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              Selected projects and product work
+            </h2>
+            <p className="mt-5 leading-8 text-slate-600">
+              A mix of product, academic, mobile and web development projects that
+              show my ability to design, build and think through practical digital
+              solutions.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {[
+              {
+                title: "TravelBozz",
+                type: "Product / Tour Guide Planning Tool",
+                description:
+                  "A travel planning product designed to help users plan trips and explore destinations more easily. This project shows my product thinking, UI planning and ability to build user-focused digital solutions.",
+                tech: ["React", "UI/UX", "Product Planning", "Web Development"],
+                status: "Own Product",
+              },
+              {
+                title: "Serendib Yathra",
+                type: "Final Year Project / Intelligent Travel Planner",
+                description:
+                  "A machine learning-driven tour guide planner for personalized travel experiences in Sri Lanka. The system uses user preferences, recommendation logic and route optimization to generate useful travel plans.",
+                tech: ["React", "Python", "Flask", "Machine Learning"],
+                status: "Academic Project",
+              },
+              {
+                title: "SpeakLing",
+                type: "Research Project / AI Voice Assistant",
+                description:
+                  "An AI-based voice assistant system designed to support autistic children through interactive communication. The project combines mobile development, AI concepts and user-focused problem solving.",
+                tech: ["Flutter", "Java", "Python", "Firebase"],
+                status: "Research Project",
+              },
+              {
+                title: "Modern SaaS Landing Page",
+                type: "Portfolio Sample / Website Design",
+                description:
+                  "A modern landing page concept for a startup product, focused on clean visual design, clear messaging, responsive layout and strong call-to-action sections.",
+                tech: ["Next.js", "React", "Tailwind CSS", "Figma"],
+                status: "Portfolio Sample",
+              },
+            ].map((project) => (
+              <article
+                key={project.title}
+                className="group flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+              >
+                <div>
+                  <div className="mb-5 flex flex-wrap items-center gap-3">
+                    <span className="rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-blue-700">
+                      {project.status}
+                    </span>
+                    <span className="text-sm font-medium text-slate-500">
+                      {project.type}
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-slate-950">
+                    {project.title}
+                  </h3>
+
+                  <p className="mt-4 leading-8 text-slate-600">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.tech.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="#contact"
+                    className="text-sm font-semibold text-blue-600 transition group-hover:text-blue-700"
+                  >
+                    Discuss a similar project →
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section className="bg-slate-950 px-6 py-24 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
